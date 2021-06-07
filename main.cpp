@@ -3,12 +3,12 @@
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
-#include<conio.h>
+#include <conio.h>
 #include <windows.h>
 using namespace std;
-void gotoxy(int x,int y)
+void gotoxy(int x, int y)
 {
- printf("%c[%d;%df",0x1B,y,x);
+  printf("%c[%d;%df", 0x1B, y, x);
 }
 
 class Movie
@@ -79,24 +79,26 @@ void Movie::input()
 {
   system("cls");
   system("color 07");
-  for (int i = 0; i < 21; i++)
+  gotoxy(34, 2);
+  cout << "Carnival Cinemas!";
+  for (int i = 1; i < 22; i++)
   {
     gotoxy(9, i);
-    cout << "::";
+    cout << "|";
     gotoxy(75, i);
-    cout << "::";
+    cout << "|";
   }
 
   for (int i = 10; i < 75; i++)
   {
     gotoxy(i, 0);
-    cout << "::";
+    cout << "_";
   }
 
-  for (int i = 75; i >= 9; i--)
+  for (int i = 74; i > 9; i--)
   {
     gotoxy(i, 20);
-    cout << "::";
+    cout << "_";
   }
   gotoxy(35, 2);
   cout << "\n\n\t\t\t\tAdding Movie ";
@@ -125,23 +127,26 @@ void Movie::show()
 {
   system("cls");
   system("color 07");
-  for (int i = 0; i < 21; i++)
+  gotoxy(34, 2);
+  cout << "Carnival Cinemas!";
+  for (int i = 1; i < 22; i++)
   {
     gotoxy(9, i);
-    cout << "::";
+    cout << "|";
     gotoxy(75, i);
-    cout << "::";
+    cout << "|";
   }
+
   for (int i = 10; i < 75; i++)
   {
     gotoxy(i, 0);
-    cout << "::";
+    cout << "_";
   }
 
-  for (int i = 75; i >= 9; i--)
+  for (int i = 74; i > 9; i--)
   {
     gotoxy(i, 20);
-    cout << "::";
+    cout << "_";
   }
   gotoxy(12, 5);
 
@@ -166,28 +171,41 @@ int main()
   {
     system("cls");
     system("color 07");
-
-    for (int i = 0; i < 21; i++)
+    gotoxy(34, 2);
+    cout << "Carnival Cinemas!";
+    for (int i = 1; i < 22; i++)
     {
       gotoxy(9, i);
       cout << "|";
       gotoxy(75, i);
       cout << "|";
     }
-    gotoxy(10, 5);
+
+    for (int i = 10; i < 75; i++)
+    {
+      gotoxy(i, 0);
+      cout << "_";
+    }
+
+    for (int i = 74; i > 9; i--)
+    {
+      gotoxy(i, 20);
+      cout << "_";
+    }
+    gotoxy(12, 5);
     cout << "Press 1 - Add a New Movie" << endl;
-    gotoxy(10, 7);
+    gotoxy(12, 7);
     cout << "Press 2 - Show Selected Movie" << endl;
-    gotoxy(10, 9);
+    gotoxy(12, 9);
     cout << "Press 3 - Display All Movies" << endl;
-    gotoxy(10, 11);
+    gotoxy(12, 11);
     cout << "Press 4 - Delete a Movie" << endl;
-    gotoxy(10, 13);
+    gotoxy(12, 13);
     cout << "Press 5 - Book a movie ticket " << endl;
-    gotoxy(10, 15);
+    gotoxy(12, 15);
     cout << "Press 6 - Display Booked Tickets " << endl;
-    gotoxy(10, 17);
-    gotoxy(10, 19);
+    gotoxy(12, 17);
+    gotoxy(12, 19);
     cout << "Enter your choice :-";
     gotoxy(42, 19);
     cin >> ch;
@@ -207,27 +225,29 @@ int main()
     {
       system("cls");
       system("color 07");
+      gotoxy(34, 2);
+      cout << "Carnival Cinemas!";
 
-      for (int i = 0; i < 21; i++)
+      for (int i = 1; i < 22; i++)
       {
         gotoxy(9, i);
-        cout << "::";
+        cout << "|";
         gotoxy(75, i);
-        cout << "::";
+        cout << "|";
       }
 
       for (int i = 10; i < 75; i++)
       {
         gotoxy(i, 0);
-        cout << "::";
+        cout << "_";
       }
 
-      for (int i = 75; i >= 9; i--)
+      for (int i = 74; i > 9; i--)
       {
         gotoxy(i, 20);
-        cout << "::";
+        cout << "_";
       }
-      gotoxy(12, 2);
+      gotoxy(12, 3);
       cout << "Enter the movie id to be displayed :-";
       cin >> id;
       F.open("movie.dat", ios::in | ios::binary);
@@ -256,6 +276,8 @@ int main()
     {
       system("cls");
       system("color 07");
+      gotoxy(34, 2);
+      cout << "Carnival Cinemas!";
 
       F.open("movie.dat", ios::in | ios::binary);
       if (F.fail())
@@ -277,25 +299,27 @@ int main()
     {
       system("cls");
       system("color 07");
+      gotoxy(34, 2);
+      cout << "Carnival Cinemas!";
 
-      for (int i = 0; i < 21; i++)
+      for (int i = 1; i < 22; i++)
       {
         gotoxy(9, i);
-        cout << "::";
+        cout << "|";
         gotoxy(75, i);
-        cout << "::";
+        cout << "|";
       }
 
       for (int i = 10; i < 75; i++)
       {
         gotoxy(i, 0);
-        cout << "::";
+        cout << "_";
       }
 
-      for (int i = 75; i >= 9; i--)
+      for (int i = 74; i > 9; i--)
       {
         gotoxy(i, 20);
-        cout << "::";
+        cout << "_";
       }
 
       chk = 0;
@@ -345,24 +369,26 @@ int main()
       int mid;
       system("cls");
       system("color 07");
-      for (int i = 0; i < 21; i++)
+      gotoxy(34, 2);
+      cout << "Carnival Cinemas!";
+      for (int i = 1; i < 22; i++)
       {
         gotoxy(9, i);
-        cout << "::";
+        cout << "|";
         gotoxy(75, i);
-        cout << "::";
+        cout << "|";
       }
 
       for (int i = 10; i < 75; i++)
       {
         gotoxy(i, 0);
-        cout << "::";
+        cout << "_";
       }
 
-      for (int i = 75; i >= 9; i--)
+      for (int i = 74; i > 9; i--)
       {
         gotoxy(i, 20);
-        cout << "::";
+        cout << "_";
       }
       gotoxy(12, 5);
       cout << "Enter the movie name :-";
